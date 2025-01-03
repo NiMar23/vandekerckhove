@@ -10,6 +10,7 @@ header {
     background-color: #333;
     padding: 10px 20px;
     color: white;
+    position: relative; /* Add relative positioning */
 }
 
 .logo {
@@ -27,7 +28,7 @@ header {
 }
 
 .hamburger-menu {
-    display: flex;
+    display: none; /* Hide by default */
     flex-direction: column;
     cursor: pointer;
 }
@@ -40,14 +41,29 @@ header {
 }
 
 nav {
-    display: none;
+    visibility: hidden; /* Hide by default */
+    opacity: 0; /* Hide by default */
+    flex-direction: column;
+    background-color: #444;
+    position: absolute; /* Position the nav absolutely */
+    top: 100%; /* Position it below the header */
+    left: 0;
+    width: 100%;
+    max-height: 0; /* Initially collapsed */
+    overflow: hidden; /* Hide overflow */
+    transition: max-height 0.5s ease-out, visibility 0.5s, opacity 0.5s; /* Smooth animation */
+}
+
+nav.open {
+    visibility: visible; /* Show when open */
+    opacity: 1; /* Show when open */
+    max-height: 50vh; /* Expand to half the viewport height */
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #444;
 }
 
 nav ul li {
@@ -59,7 +75,15 @@ nav ul li {
 
 @media (min-width: 600px) {
     nav {
-        display: flex;
+        visibility: visible; /* Show on larger screens */
+        opacity: 1; /* Show on larger screens */
+        display: flex; /* Show on larger screens */
+        flex-direction: row;
+        position: static; /* Reset positioning */
+        width: auto; /* Reset width */
+        max-height: none; /* Reset max-height */
+        overflow: visible; /* Reset overflow */
+        transition: none; /* Remove transition */
     }
     nav ul {
         flex-direction: row;
@@ -69,6 +93,12 @@ nav ul li {
         border: none;
     }
     .hamburger-menu {
-        display: none;
+        display: none; /* Hide on larger screens */
+    }
+}
+
+@media (max-width: 599px) {
+    .hamburger-menu {
+        display: flex; /* Show on smaller screens */
     }
 }

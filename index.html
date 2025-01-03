@@ -12,7 +12,7 @@
             <img src="logo.png" alt="Logo">
             <div class="company-name">Van De Kerckhove BV</div>
         </div>
-        <div class="hamburger-menu" onclick="toggleMenu()">
+        <div class="hamburger-menu" id="hamburger-menu">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
@@ -27,14 +27,9 @@
         </nav>
     </header>
     <script>
-        function toggleMenu() {
-            const nav = document.getElementById('nav-menu');
-            if (nav.style.display === 'block') {
-                nav.style.display = 'none';
-            } else {
-                nav.style.display = 'block';
-            }
-        }
+        document.getElementById('hamburger-menu').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('open');
+        });
     </script>
 </body>
 </html>
