@@ -102,10 +102,27 @@ nav ul li {
 
 .hero-text {
     text-align: center;
+    font-size: 20px;
     color: white;
     margin-top: 50%;
     margin-left: 5%;
     margin-right: 5%;
+}
+
+.hero-text button {
+    padding: 15px 30px; /* Increase padding for a larger button */
+    font-size: 16px; /* Increase font size */
+    border-radius: 25px; /* Make the button rounded */
+    border: none; /* Remove default border */
+    background-color: #007BFF; /* Set background color */
+    color: white; /* Set text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    margin-top: 20px; /* Add space between the text and the button */
+}
+
+.hero-text button:hover {
+    background-color: #0056b3; /* Darken background color on hover */
 }
 
 @media (min-width: 600px) {
