@@ -7,14 +7,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: whitesmoke;
-    padding: 10px 20px;
+    padding: 10px 20px; /* Adjust padding as needed */
     color: black;
-    background-color: whitesmoke;
     position: fixed; /* Add fixed positioning */
     top: 0; /* Position at the top */
     width: 100%; /* Full width */
     z-index: 1000; /* Ensure it stays on top */
+    background-color: whitesmoke;
 }
 
 .logo {
@@ -40,6 +39,9 @@ header {
     flex-direction: column;
     cursor: pointer;
     color: black; /* Set color to black */
+    position: absolute;
+    right: 50px; /* Adjust this value to position the button */
+    top: 10px; /* Adjust this value to position the button */
 }
 
 .bar {
@@ -113,7 +115,8 @@ nav ul li {
 }
 
 main {
-    margin-top: 60px; /* Adjust this value based on the height of your header */
+    margin-top: 90px; /* Adjust this value based on the height of your header */
+    margin-left: 5px;
 }
 
 .service img {
