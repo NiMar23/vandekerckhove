@@ -11,7 +11,10 @@ header {
     padding: 10px 20px;
     color: black;
     background-color: whitesmoke;
-    position: relative; /* Add relative positioning */
+    position: fixed; /* Add fixed positioning */
+    top: 0; /* Position at the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays on top */
 }
 
 .logo {
@@ -107,4 +110,14 @@ nav ul li {
     .hamburger-menu {
         display: flex; /* Show on smaller screens */
     }
+}
+
+main {
+    margin-top: 60px; /* Adjust this value based on the height of your header */
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
 }
