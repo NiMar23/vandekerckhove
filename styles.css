@@ -7,9 +7,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: whitesmoke;
     padding: 10px 20px;
-    color: white;
+    color: black;
+    background-color: whitesmoke;
     position: relative; /* Add relative positioning */
 }
 
@@ -27,16 +28,21 @@ header {
     font-size: 24px;
 }
 
+.company-tagline {
+    font-size: 12px;
+}
+
 .hamburger-menu {
     display: none; /* Hide by default */
     flex-direction: column;
     cursor: pointer;
+    color: black; /* Set color to black */
 }
 
 .bar {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: black;
     margin: 4px 0;
 }
 
@@ -47,8 +53,8 @@ nav {
     background-color: #444;
     position: absolute; /* Position the nav absolutely */
     top: 100%; /* Position it below the header */
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 50%;
     max-height: 0; /* Initially collapsed */
     overflow: hidden; /* Hide overflow */
     transition: max-height 0.5s ease-out, visibility 0.5s, opacity 0.5s; /* Smooth animation */
