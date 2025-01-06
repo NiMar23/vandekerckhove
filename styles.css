@@ -36,13 +36,14 @@ header {
 }
 
 .hamburger-menu {
-    display: none; /* Hide by default */
+    display: flex; /* Show the hamburger menu */
     flex-direction: column;
     cursor: pointer;
     color: black; /* Set color to black */
     position: absolute;
     right: 50px; /* Adjust this value to position the button */
     top: 10px; /* Adjust this value to position the button */
+    z-index: 1100; /* Ensure it stays on top */
 }
 
 .bar {
@@ -50,6 +51,19 @@ header {
     height: 3px;
     background-color: black;
     margin: 4px 0;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.hamburger-menu.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 nav {
@@ -89,8 +103,17 @@ nav ul li {
     width: 100%; /* Ensure the list items take full width */
 }
 
+nav ul li a {
+    color: white; /* Set text color to white */
+    text-decoration: none; /* Remove underline */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Optionally, add underline on hover */
+}
+
 main {
-    padding-top: 0px; /* Adjust this value based on the height of your header */
+    padding-top: 80px; /* Adjust this value based on the height of your header */
 }
 
 .hero {
