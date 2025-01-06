@@ -78,6 +78,7 @@ nav {
     max-height: 0; /* Initially collapsed */
     overflow: hidden; /* Hide overflow */
     transition: max-height 0.5s ease-out, visibility 0.5s, opacity 0.5s; /* Smooth animation */
+    padding-right: 20px; /* Add padding to the right */
 }
 
 nav.open {
@@ -99,6 +100,7 @@ nav ul li {
     padding: 20px;
     text-align: center;
     color: white;
+    font-size: 3vh;
     border-bottom: 1px solid #555;
     width: 100%; /* Ensure the list items take full width */
 }
@@ -113,8 +115,8 @@ nav ul li a:hover {
 }
 
 main {
-    padding-top: 80px; /* Adjust this value based on the height of your header */
-}
+    margin-top: 60px; /* Adjust margin to account for the fixed header */
+} 
 
 .hero {
     margin-top: 0;
@@ -186,7 +188,14 @@ button:hover {
     background-color: #0056b3; /* Darken background color on hover */
 }
 
-@media (min-width: 600px) {
+.services {
+    padding-top: 60px; /* Adjust this value based on the height of your header */
+}
+
+.projects {
+    padding-top: 60px; /* Adjust this value based on the height of your header */
+
+@media (min-width: 850px) {
     nav {
         visibility: visible; /* Show on larger screens */
         opacity: 1; /* Show on larger screens */
@@ -198,19 +207,21 @@ button:hover {
         overflow: visible; /* Reset overflow */
         transition: none; /* Remove transition */
     }
+
     nav ul {
         flex-direction: row;
     }
     nav ul li {
         padding: 10px 20px;
         border: none;
+        font-size: 20px;
     }
     .hamburger-menu {
         display: none; /* Hide on larger screens */
     }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 849px) {
     .hamburger-menu {
         display: flex; /* Show on smaller screens */
     }
