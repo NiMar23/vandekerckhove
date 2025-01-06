@@ -78,7 +78,6 @@ nav {
     max-height: 0; /* Initially collapsed */
     overflow: hidden; /* Hide overflow */
     transition: max-height 0.5s ease-out, visibility 0.5s, opacity 0.5s; /* Smooth animation */
-    padding-right: 20px; /* Add padding to the right */
 }
 
 nav.open {
@@ -90,7 +89,7 @@ nav.open {
 nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding-right: 20px;
     display: flex;
     flex-direction: column;
     align-items: center; /* Center the text horizontally */
@@ -115,8 +114,8 @@ nav ul li a:hover {
 }
 
 main {
-    margin-top: 60px; /* Adjust margin to account for the fixed header */
-} 
+    padding-top: 60px; /* Adjust this value based on the height of your header */
+}
 
 .hero {
     margin-top: 0;
@@ -194,8 +193,13 @@ button:hover {
 
 .projects {
     padding-top: 60px; /* Adjust this value based on the height of your header */
+}
 
 @media (min-width: 850px) {
+    .hamburger-menu {
+        display: none; /* Hide the hamburger menu on larger screens */
+    }
+
     nav {
         visibility: visible; /* Show on larger screens */
         opacity: 1; /* Show on larger screens */
@@ -204,25 +208,16 @@ button:hover {
         position: static; /* Reset positioning */
         width: auto; /* Reset width */
         max-height: none; /* Reset max-height */
-        overflow: visible; /* Reset overflow */
-        transition: none; /* Remove transition */
+        padding-right: 0; /* Reset padding */
     }
 
     nav ul {
-        flex-direction: row;
+        flex-direction: row; /* Horizontal layout for larger screens */
     }
-    nav ul li {
-        padding: 10px 20px;
-        border: none;
-        font-size: 20px;
-    }
-    .hamburger-menu {
-        display: none; /* Hide on larger screens */
-    }
-}
 
-@media (max-width: 849px) {
-    .hamburger-menu {
-        display: flex; /* Show on smaller screens */
+    nav ul li {
+        border-bottom: none; /* Remove border for larger screens */
+        padding: 10px 20px; /* Adjust padding for larger screens */
+        font-size: 2.5vh; /* Adjust font size */
     }
 }
