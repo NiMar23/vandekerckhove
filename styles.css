@@ -101,7 +101,7 @@ main {
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
     position: relative; /* Ensure the pseudo-element is positioned correctly */
-    padding-top: 60px; /* Adjust this value based on the height of your header */
+    padding-top: 1vh; /* Adjust this value based on the height of your header */
 }
 
 .hero::before {
