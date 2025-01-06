@@ -188,7 +188,29 @@ button:hover {
 }
 
 .services {
+    margin-top: 10px;
     padding-top: 60px; /* Adjust this value based on the height of your header */
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.service {
+    margin: 0%;
+    padding: 0%;
+}
+
+.service-heading {
+    font-size: 20px;
+    background-color: whitesmoke;
+}
+
+.service-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Set the height of the image container */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 10px; /* Add rounded corners */
 }
 
 .projects {
