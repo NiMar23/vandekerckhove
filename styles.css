@@ -304,7 +304,6 @@ button:hover {
 }
 
 .contact-button {
-    padding: 10px 30px; /* Increase padding for a larger button */
     font-size: 16px; /* Increase font size */
     border-radius: 25px; /* Make the button rounded */
     border: none; /* Remove default border */
@@ -327,8 +326,8 @@ button:hover {
     color: inherit; /* Inherit text color */
     font-size: inherit; /* Inherit font size */
     cursor: pointer; /* Ensure the cursor is a pointer */
-    padding-top: 5px; /* Adjust padding to ensure buttons are same height */
-    padding-bottom: 25px;
+    padding-top: 10px; /* Adjust padding to ensure buttons are same height */
+    padding-bottom: 33px;
 }
 
 .contact-button:hover {
