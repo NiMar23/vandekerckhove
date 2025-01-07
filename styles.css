@@ -304,7 +304,7 @@ button:hover {
 }
 
 .contact-button {
-    padding: 15px 30px; /* Increase padding for a larger button */
+    padding: 10px 30px; /* Increase padding for a larger button */
     font-size: 16px; /* Increase font size */
     border-radius: 25px; /* Make the button rounded */
     border: none; /* Remove default border */
@@ -313,11 +313,32 @@ button:hover {
     cursor: pointer; /* Change cursor to pointer on hover */
     transition: background-color 0.3s ease; /* Smooth transition for background color */
     margin-top: 20px; /* Add space between the text and the button */
+    width: 270px; /* Set a fixed width for the buttons */
+    display: inline-block; /* Ensure the buttons are inline-block elements */
+    text-align: center; /* Center the text inside the buttons */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.contact-button button {
+    width: 100%; /* Make the button take up the full width of the container */
+    height: 20px; /* Make the button take up the full height of the container */
+    background: none; /* Remove button background */
+    border: none; /* Remove button border */
+    color: inherit; /* Inherit text color */
+    font-size: inherit; /* Inherit font size */
+    cursor: pointer; /* Ensure the cursor is a pointer */
+    padding-top: 5px; /* Adjust padding to ensure buttons are same height */
+    padding-bottom: 22px;
 }
 
 .contact-button:hover {
     background-color: #0056b3; /* Darken background color on hover */
 }
+
+.contact-button i {
+    margin-right: 10px; /* Add some space between the icon and the text */
+}
+
 
 /* defining large screens */
 
