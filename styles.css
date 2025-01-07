@@ -62,8 +62,8 @@ header {
     cursor: pointer;
     color: black; /* Set color to black */
     position: absolute;
-    right: 50px; /* Adjust this value to position the button */
-    top: 10px; /* Adjust this value to position the button */
+    right: 10px; /* Adjust this value to position the button */
+    top: 22px; /* Adjust this value to position the button */
     z-index: 1100; /* Ensure it stays on top */
 }
 
@@ -117,10 +117,10 @@ nav ul {
 }
 
 nav ul li {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     color: white;
-    font-size: 2.5vh;
+    font-size: 2vh;
     border-bottom: 1px solid #555;
     width: 100%; /* Ensure the list items take full width */
 }
