@@ -328,7 +328,7 @@ button:hover {
     font-size: inherit; /* Inherit font size */
     cursor: pointer; /* Ensure the cursor is a pointer */
     padding-top: 5px; /* Adjust padding to ensure buttons are same height */
-    padding-bottom: 22px;
+    padding-bottom: 25px;
 }
 
 .contact-button:hover {
@@ -367,4 +367,22 @@ button:hover {
         padding: 10px 20px; /* Adjust padding for larger screens */
         font-size: 2.5vh; /* Adjust font size */
     }
+}
+
+/* defining footer */
+
+footer {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.copyright {
+    font-size: 10px;
+    padding-top: 20px;
 }
