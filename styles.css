@@ -29,12 +29,14 @@ header {
     align-items: center;
     padding: 10px 20px; /* Adjust padding as needed */
     color: black;
-    position: fixed; /* Add fixed positioning */
+    position: sticky; /* Add fixed positioning */
     top: 0; /* Position at the top */
     width: 100%; /* Full width */
+    height: 75px; /* Adjust height as needed */
     z-index: 1000; /* Ensure it stays on top */
     background-color: whitesmoke;
 }
+
 
 .logo {
     display: flex;
@@ -117,7 +119,7 @@ nav ul {
 }
 
 nav ul li {
-    padding: 10px;
+    padding: 10px 0;
     text-align: center;
     color: white;
     font-size: 2vh;
@@ -128,20 +130,23 @@ nav ul li {
 nav ul li a {
     color: white; /* Set text color to white */
     text-decoration: none; /* Remove underline */
+    font-weight: normal; /* Normal font weight */
 }
 
 nav ul li a:hover {
     text-decoration: underline; /* Optionally, add underline on hover */
 }
 
-/* defining hero section */
-
-main {
-    padding-top: 60px; /* Adjust this value based on the height of your header */
+nav ul li a:active, nav ul li a:focus {
+    font-weight: bold; /* Bold on click */
+    color: white; /* Set text color to white */
+    text-decoration: none; /* Remove underline */
+    outline: none; /* Remove default focus style */
 }
 
+/* defining hero section */
+
 .hero {
-    margin-top: 0;
     height: 100vh; /* Set the height of the hero section */
     background-image: url('heating\ dark.jpg'); /* Replace 'background.jpg' with the path to your image */
     background-size: cover; /* Ensure the background covers the entire section */
@@ -208,14 +213,14 @@ button:hover {
 
 #Diensten, #Realisaties {
     margin-top: 10px;
-    padding-top: 70px; /* Adjust this value based on the height of your header */
+    padding-top: 20px; /* Adjust this value based on the height of your header */
     padding-left: 8px;
     padding-right: 8px;
 }
 
 .services, .projects {
-    /* margin-top: 10px;
-    padding-top: 70px; Adjust this value based on the height of your header */
+    margin-top: 10px;
+    padding-top: 20px; Adjust this value based on the height of your header */
     padding-left: 8px;
     padding-right: 8px;
 }
@@ -223,7 +228,6 @@ button:hover {
 .section-heading {
     font-size: 30px;
     text-align: center;
-    padding-bottom: 5%;
 }
 
 .service, .project {
@@ -231,7 +235,6 @@ button:hover {
     padding: 0%;
     background-color: whitesmoke;
     padding-bottom: 2%;
-    border-radius: 3%;
     border-color: #555;
     margin-top: 5%;
     margin-bottom: 10%;
@@ -239,17 +242,16 @@ button:hover {
 
 .service-heading {
     font-size: 25px;
-    text-align: center;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    text-align: left;
+    padding-top: 3%;
+    padding-left: 2%;
 }
 
 .service-text {
     font-size: 16px;
-    text-align: center;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    margin-left: 1%;
+    text-align: left;
+    padding-top: 1%;
+    padding-left: 2%
 }
 
 .service-image-container, .project-image-container {
@@ -264,7 +266,7 @@ button:hover {
 
 .service img, .project img {
     width: 100%; /* Makes the image fit the width of the screen */
-    max-height: 200px; /* Limits the height of the image */
+    max-height: 250px; /* Limits the height of the image */
     object-fit: cover; /* Keeps the image's original dimensions and hides parts that exceed the container */
 }
 
@@ -338,36 +340,6 @@ button:hover {
     margin-right: 10px; /* Add some space between the icon and the text */
 }
 
-
-/* defining large screens */
-
-@media (min-width: 850px) {
-    .hamburger-menu {
-        display: none; /* Hide the hamburger menu on larger screens */
-    }
-
-    nav {
-        visibility: visible; /* Show on larger screens */
-        opacity: 1; /* Show on larger screens */
-        display: flex; /* Show on larger screens */
-        flex-direction: row;
-        position: static; /* Reset positioning */
-        width: auto; /* Reset width */
-        max-height: none; /* Reset max-height */
-        padding-right: 0; /* Reset padding */
-    }
-
-    nav ul {
-        flex-direction: row; /* Horizontal layout for larger screens */
-    }
-
-    nav ul li {
-        border-bottom: none; /* Remove border for larger screens */
-        padding: 10px 20px; /* Adjust padding for larger screens */
-        font-size: 2.5vh; /* Adjust font size */
-    }
-}
-
 /* defining footer */
 
 footer {
@@ -384,4 +356,97 @@ footer {
 .copyright {
     font-size: 10px;
     padding-top: 20px;
+}
+
+.inactive {
+    pointer-events: none;
+    opacity: 0.5; /* Reduce opacity to indicate it's inactive */
+}
+
+/* defining larger screens */
+
+@media (min-width: 740px) {
+    .hamburger-menu {
+        display: none; /* Hide the hamburger menu on larger screens */
+    }
+
+    nav {
+        visibility: visible; /* Show on larger screens */
+        opacity: 1; /* Show on larger screens */
+        display: flex; /* Show on larger screens */
+        flex-direction: row;
+        position: absolute;
+        right: 10px; /* Adjust this value to position the nav */
+        top: 22px; /* Adjust this value to position the nav */
+        margin-right: 0px; /* Adjust this value to position the nav */
+        width: 50%; /* Reset width */
+        max-height: none; /* Reset max-height */
+        padding-right: 0; /* Reset padding */
+        margin-left: auto; /* Align to the right */
+        margin-right: 0%; /* Align to the right */
+        border-radius: 25px;
+        border: none;
+    }
+
+    nav ul {
+        flex-direction: row; /* Horizontal layout for larger screens */
+    }
+
+    nav ul li {
+        border-bottom: none; /* Remove border for larger screens */
+        font-size: 1.7vh; /* Adjust font size */
+    }
+
+    header {
+        justify-content: space-between; /* Ensure space between logo and nav */
+    }
+
+    .logo {
+        flex-grow: 1; /* Allow logo to take available space */
+    }
+
+    .hero {
+        height: 40vh; /* Set the height of the hero section */
+    }
+
+    .phone-button {
+        pointer-events: none;
+        opacity: 0.7; /* Reduce opacity to indicate it's inactive */
+        }
+
+    .services, .projects{
+        display: flex;
+        flex-direction: column; /* Stack elements on top of each other by default */
+    }
+    
+    .service, .project{
+        display: flex;
+        flex-direction: row; /* Arrange elements side by side on larger screens */
+        align-items: flex-start; /* Align items to the top */
+        text-align: left; /* Align text to the left */
+        padding-top: 0px; /* Reset padding */
+        margin: 10px; /*smaller margin */
+        padding-bottom: 0px; /* Reset padding */
+    }
+        
+    .service img, .project img {
+        max-width: 50%; /* Adjust the image width for larger screens */
+        height: auto; /* Maintain the aspect ratio */
+    }
+    
+    .service-content, .project-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Distribute the h3 and p elements */
+        padding-left: 20px; /* Add some padding to the left of the text */
+        }
+        
+    .service-heading {
+        margin-bottom: auto; /* Ensure heading stays at the top */
+    }
+    
+    .service-text {
+        margin-top: auto; /* Ensure text stays at the bottom */
+        padding-right: 3%;        
+    }
 }

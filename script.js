@@ -15,3 +15,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll("nav ul li a");
+
+    function setActive(link) {
+        links.forEach(link => link.classList.remove("active"));
+        link.classList.add("active");
+    }
+
+    links.forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            setActive(this);
+
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - document.querySelector("header").offsetHeight,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+});
