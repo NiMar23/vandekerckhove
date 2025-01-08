@@ -408,16 +408,8 @@ footer {
         opacity: 0.7; /* Reduce opacity to indicate it's inactive */
         }
 
-    .services{
-        display: flex;
-        flex-direction: column; /* Stack elements on top of each other by default */
-    }
-    
     .service {
-        display: flex;
-        flex-direction: row; /* Arrange elements side by side on larger screens */
-        align-items: flex-start; /* Align items to the top */
-        text-align: left; /* Align text to the left */
+        display: flex; /* Arrange elements side by side */
         padding-top: 0px; /* Reset padding */
         margin: 10px; /*smaller margin */
         padding-bottom: 0px; /* Reset padding */
@@ -427,13 +419,6 @@ footer {
         max-width: 50%; /* Adjust the image width for larger screens */
         height: auto; /* Maintain the aspect ratio */
     }
-    
-    .service-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; /* Distribute the h3 and p elements */
-        padding-left: 20px; /* Add some padding to the left of the text */
-        }
         
     .service-heading {
         margin-bottom: auto; /* Ensure heading stays at the top */
@@ -441,6 +426,5 @@ footer {
     
     .service-text {
         margin-top: auto; /* Ensure text stays at the bottom */
-        padding-right: 3%;        
     }
 }
