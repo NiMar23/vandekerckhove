@@ -218,7 +218,7 @@ button:hover {
     padding-right: 8px;
 }
 
-.services, .projects {
+.services {
     margin-top: 10px;
     padding-top: 20px; Adjust this value based on the height of your header */
     padding-left: 8px;
@@ -230,7 +230,7 @@ button:hover {
     text-align: center;
 }
 
-.service, .project {
+.service {
     margin: 0%;
     padding: 0%;
     background-color: whitesmoke;
@@ -254,7 +254,7 @@ button:hover {
     padding-left: 2%
 }
 
-.service-image-container, .project-image-container {
+.service-image-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -264,16 +264,10 @@ button:hover {
     position: relative; /* Ensure the img is positioned correctly */
 }
 
-.service img, .project img {
+.service img {
     width: 100%; /* Makes the image fit the width of the screen */
     max-height: 250px; /* Limits the height of the image */
     object-fit: cover; /* Keeps the image's original dimensions and hides parts that exceed the container */
-}
-
-/* defining projects section */
-
-.projects {
-    padding-top: 60px; /* Adjust this value based on the height of your header */
 }
 
 /* defining contact section */
@@ -414,12 +408,12 @@ footer {
         opacity: 0.7; /* Reduce opacity to indicate it's inactive */
         }
 
-    .services, .projects{
+    .services{
         display: flex;
         flex-direction: column; /* Stack elements on top of each other by default */
     }
     
-    .service, .project{
+    .service {
         display: flex;
         flex-direction: row; /* Arrange elements side by side on larger screens */
         align-items: flex-start; /* Align items to the top */
@@ -429,12 +423,12 @@ footer {
         padding-bottom: 0px; /* Reset padding */
     }
         
-    .service img, .project img {
+    .service img {
         max-width: 50%; /* Adjust the image width for larger screens */
         height: auto; /* Maintain the aspect ratio */
     }
     
-    .service-content, .project-content {
+    .service-content {
         display: flex;
         flex-direction: column;
         justify-content: space-between; /* Distribute the h3 and p elements */
