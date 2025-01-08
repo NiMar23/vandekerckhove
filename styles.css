@@ -220,7 +220,7 @@ button:hover {
 
 .services {
     margin-top: 10px;
-    padding-top: 20px; Adjust this value based on the height of your header */
+    padding-top: 20px; /*Adjust this value based on the height of your header */
     padding-left: 8px;
     padding-right: 8px;
 }
@@ -414,7 +414,11 @@ footer {
         margin: 10px; /*smaller margin */
         padding-bottom: 0px; /* Reset padding */
     }
-        
+
+    .service-description {
+        padding-left: 2%;
+    }
+
     .service img {
         max-width: 50%; /* Adjust the image width for larger screens */
         height: auto; /* Maintain the aspect ratio */
@@ -422,6 +426,7 @@ footer {
         
     .service-heading {
         margin-bottom: auto; /* Ensure heading stays at the top */
+        padding-bottom: 2%;
     }
     
     .service-text {
