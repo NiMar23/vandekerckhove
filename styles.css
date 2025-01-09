@@ -132,7 +132,7 @@ nav ul li {
     padding: 10px 0;
     text-align: center;
     color: white;
-    font-size: 2vh;
+    font-size: 3vh;
     border-bottom: 1px solid #555;
     width: 100%; /* Ensure the list items take full width */
 }
