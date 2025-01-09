@@ -427,30 +427,46 @@ footer {
         opacity: 0.7; /* Reduce opacity to indicate it's inactive */
         }
 
-    .service {
-        display: flex; /* Arrange elements side by side */
-        padding-top: 0px; /* Reset padding */
-        margin: 10px; /*smaller margin */
-        padding-bottom: 0px; /* Reset padding */
-    }
+            .section-heading {
+                margin-bottom: 20px; /* Add space between heading and services */
+            }
 
-    .service-description {
-        padding-left: 2%;
-    }
+            .services {
+                display: flex; /* Arrange elements side by side */
+                flex-wrap: wrap; /* Allow elements to wrap to the next line */
+                justify-content: space-evenly; /* Space items evenly */
+                padding: 0 10px; /* Adjust padding as needed */
+            }
 
-    .service img {
-        max-width: 50%; /* Adjust the image width for larger screens */
-        height: auto; /* Maintain the aspect ratio */
-    }
+            .service {
+                display: flex; /* Arrange elements side by side */
+                align-items: stretch; /* Stretch items to full height */
+                width: 100%;
+                margin: 10px; /* Smaller margin */
+                padding-bottom: 0; /* Remove padding */
+                margin-bottom: 20px;
+            }
         
-    .service-heading {
-        margin-bottom: auto; /* Ensure heading stays at the top */
-        padding-bottom: 2%;
-    }
-    
-    .service-text {
-        margin-top: auto; /* Ensure text stays at the bottom */
-    }
+            .service img {
+                flex: 1; /* Allow image to take up 50% */
+                max-width: 50%;
+                height: auto; /* Maintain the aspect ratio */
+            }
+        
+            .service-description {
+                flex: 1; /* Allow description to take up the remaining 50% */
+                padding: 0 2%;
+            }
+        
+            .service-heading {
+                margin-bottom: auto; /* Ensure heading stays at the top */
+                padding-bottom: 2%;
+            }
+        
+            .service-text {
+                margin-top: auto; /* Ensure text stays at the bottom */
+                padding-right: 10px;
+            }
 
     .contact {
         padding-top: 2%; /* Adjust this value based on the height of your header */
