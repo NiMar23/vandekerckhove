@@ -420,6 +420,7 @@ footer {
 
     .hero {
         height: 40vh; /* Set the height of the hero section */
+        min-height: 250px; /* Set a minimum height */
     }
 
     .phone-button {
