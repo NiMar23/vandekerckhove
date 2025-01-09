@@ -186,14 +186,13 @@ nav ul li a:active, nav ul li a:focus {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    font-size: 20px;
     color: white;
     width: 90%; /* Adjust width as needed */
 }
 
 .hero-text button {
     padding: 15px 30px; /* Increase padding for a larger button */
-    font-size: 16px; /* Increase font size */
+    font-size: 20px; /* Increase font size */
     border-radius: 25px; /* Make the button rounded */
     border: none; /* Remove default border */
     background-color: #007BFF; /* Set background color */
@@ -207,18 +206,33 @@ nav ul li a:active, nav ul li a:focus {
     background-color: #0056b3; /* Darken background color on hover */
 }
 
-button {
+.hero-h1 {
+    font-size: 40px;
+    margin-bottom: 30px; /* Add space between heading and text */
+}
+
+.hero-p {
+    font-size: 30px;
+    margin-bottom: 50px; /* Add space between text and button */
+}
+
+.phone-button,
+.contact-button {
     padding: 15px 30px; /* Increase padding for a larger button */
-    font-size: 16px; /* Increase font size */
+    font-size: 25px; /* Increase font size */
     border-radius: 25px; /* Make the button rounded */
     border: none; /* Remove default border */
     background-color: #007BFF; /* Set background color */
     color: white; /* Set text color */
     cursor: pointer; /* Change cursor to pointer on hover */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the element inline-block */
     transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
-button:hover {
+.phone-button:hover,
+.contact-button:hover {
     background-color: #0056b3; /* Darken background color on hover */
 }
 
