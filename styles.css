@@ -23,18 +23,27 @@ time, mark, audio, video {
 
 /* defining header, logo and company name */
 
+.container {
+    max-width: 1200px; /* Set the maximum width of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 0px; /* Adjust padding as needed */
+    background-color: whitesmoke;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px; /* Adjust padding as needed */
     color: black;
-    position: fixed; /* Add fixed positioning */
+    position: sticky; /* Add fixed positioning */
     top: 0; /* Position at the top */
     width: 100%; /* Full width */
+    height: 75px; /* Adjust height as needed */
     z-index: 1000; /* Ensure it stays on top */
-    background-color: whitesmoke;
+    background-color: #F5F5F5;
 }
+
 
 .logo {
     display: flex;
@@ -88,6 +97,8 @@ header {
 }
 
 nav {
+    display: flex;
+    justify-content: center; /* Center the nav horizontally */
     visibility: hidden; /* Hide by default */
     opacity: 0; /* Hide by default */
     flex-direction: column;
@@ -108,16 +119,17 @@ nav.open {
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding-right: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the text horizontally */
+    align-items: stretch; /* Ensure the items take full width */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    padding: 10px;
+    flex: 1; /* Distribute the space evenly */
+    padding: 10px 0;
     text-align: center;
     color: white;
     font-size: 2vh;
@@ -126,22 +138,28 @@ nav ul li {
 }
 
 nav ul li a {
+    display: block; /* Make the entire list item clickable */  
     color: white; /* Set text color to white */
     text-decoration: none; /* Remove underline */
+    font-weight: normal; /* Normal font weight */
 }
 
 nav ul li a:hover {
     text-decoration: underline; /* Optionally, add underline on hover */
+    color: white; /* Set text color to white */
 }
+
+nav ul li a:active, nav ul li a:focus {
+    font-weight: bold; /* Bold on click */
+    color: white; /* Set text color to white */
+    text-decoration: none; /* Remove underline */
+    outline: none; /* Remove default focus style */
+}
+
 
 /* defining hero section */
 
-main {
-    padding-top: 60px; /* Adjust this value based on the height of your header */
-}
-
 .hero {
-    margin-top: 0;
     height: 100vh; /* Set the height of the hero section */
     background-image: url('heating\ dark.jpg'); /* Replace 'background.jpg' with the path to your image */
     background-size: cover; /* Ensure the background covers the entire section */
@@ -208,14 +226,14 @@ button:hover {
 
 #Diensten, #Realisaties {
     margin-top: 10px;
-    padding-top: 70px; /* Adjust this value based on the height of your header */
+    padding-top: 20px; /* Adjust this value based on the height of your header */
     padding-left: 8px;
     padding-right: 8px;
 }
 
-.services, .projects {
-    /* margin-top: 10px;
-    padding-top: 70px; Adjust this value based on the height of your header */
+.services {
+    margin-top: 10px;
+    padding-top: 20px; /*Adjust this value based on the height of your header */
     padding-left: 8px;
     padding-right: 8px;
 }
@@ -223,15 +241,13 @@ button:hover {
 .section-heading {
     font-size: 30px;
     text-align: center;
-    padding-bottom: 5%;
 }
 
-.service, .project {
+.service {
     margin: 0%;
     padding: 0%;
-    background-color: whitesmoke;
+    background-color: #E3E3E3;
     padding-bottom: 2%;
-    border-radius: 3%;
     border-color: #555;
     margin-top: 5%;
     margin-bottom: 10%;
@@ -239,20 +255,19 @@ button:hover {
 
 .service-heading {
     font-size: 25px;
-    text-align: center;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    text-align: left;
+    padding-top: 3%;
+    padding-left: 2%;
 }
 
 .service-text {
     font-size: 16px;
-    text-align: center;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    margin-left: 1%;
+    text-align: left;
+    padding-top: 1%;
+    padding-left: 2%
 }
 
-.service-image-container, .project-image-container {
+.service-image-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -262,16 +277,10 @@ button:hover {
     position: relative; /* Ensure the img is positioned correctly */
 }
 
-.service img, .project img {
+.service img {
     width: 100%; /* Makes the image fit the width of the screen */
-    max-height: 200px; /* Limits the height of the image */
+    max-height: 250px; /* Limits the height of the image */
     object-fit: cover; /* Keeps the image's original dimensions and hides parts that exceed the container */
-}
-
-/* defining projects section */
-
-.projects {
-    padding-top: 60px; /* Adjust this value based on the height of your header */
 }
 
 /* defining contact section */
@@ -303,69 +312,38 @@ button:hover {
     margin-left: 1%;
 }
 
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the buttons horizontally */
+}
+
 .contact-button {
-    font-size: 16px; /* Increase font size */
-    border-radius: 25px; /* Make the button rounded */
+    display: inline-block;
+    width: 270px; /* Fixed width for the buttons */
+    text-align: center;
+    margin-bottom: 10px; /* Space between buttons */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.contact-button button {
+    width: 100%; /* Ensure the button takes full width of the container */
+    padding: 10px 20px; /* Add padding for button */
+    font-size: 16px;
+    border-radius: 25px;
     border: none; /* Remove default border */
     background-color: #007BFF; /* Set background color */
     color: white; /* Set text color */
     cursor: pointer; /* Change cursor to pointer on hover */
     transition: background-color 0.3s ease; /* Smooth transition for background color */
-    margin-top: 20px; /* Add space between the text and the button */
-    width: 270px; /* Set a fixed width for the buttons */
-    display: inline-block; /* Ensure the buttons are inline-block elements */
-    text-align: center; /* Center the text inside the buttons */
-    text-decoration: none; /* Remove underline from links */
 }
 
-.contact-button button {
-    width: 100%; /* Make the button take up the full width of the container */
-    height: 20px; /* Make the button take up the full height of the container */
-    background: none; /* Remove button background */
-    border: none; /* Remove button border */
-    color: inherit; /* Inherit text color */
-    font-size: inherit; /* Inherit font size */
-    cursor: pointer; /* Ensure the cursor is a pointer */
-    padding-top: 10px; /* Adjust padding to ensure buttons are same height */
-    padding-bottom: 33px;
-}
-
-.contact-button:hover {
-    background-color: #0056b3; /* Darken background color on hover */
-}
-
-.contact-button i {
+.contact-button button i {
     margin-right: 10px; /* Add some space between the icon and the text */
 }
 
-
-/* defining large screens */
-
-@media (min-width: 850px) {
-    .hamburger-menu {
-        display: none; /* Hide the hamburger menu on larger screens */
-    }
-
-    nav {
-        visibility: visible; /* Show on larger screens */
-        opacity: 1; /* Show on larger screens */
-        display: flex; /* Show on larger screens */
-        flex-direction: row;
-        position: static; /* Reset positioning */
-        width: auto; /* Reset width */
-        max-height: none; /* Reset max-height */
-        padding-right: 0; /* Reset padding */
-    }
-
-    nav ul {
-        flex-direction: row; /* Horizontal layout for larger screens */
-    }
-
-    nav ul li {
-        border-bottom: none; /* Remove border for larger screens */
-        padding: 10px 20px; /* Adjust padding for larger screens */
-        font-size: 2.5vh; /* Adjust font size */
-    }
+.contact-button button:hover {
+    background-color: #0056b3; /* Darken background color on hover */
 }
 
 /* defining footer */
@@ -384,4 +362,135 @@ footer {
 .copyright {
     font-size: 10px;
     padding-top: 20px;
+}
+
+.inactive {
+    pointer-events: none;
+    opacity: 0.5; /* Reduce opacity to indicate it's inactive */
+}
+
+/* defining larger screens */
+
+@media (min-width: 740px) {
+    .hamburger-menu {
+        display: none; /* Hide the hamburger menu on larger screens */
+    }
+
+    nav {
+        visibility: visible; /* Show on larger screens */
+        opacity: 1; /* Show on larger screens */
+        display: flex; /* Show on larger screens */
+        flex-direction: row;
+        justify-content: center;
+        position: absolute;
+        right: 10px; /* Adjust this value to position the nav */
+        top: 22px; /* Adjust this value to position the nav */
+        margin-right: 0px; /* Adjust this value to position the nav */
+        width: 50%; /* Adjust width */
+        max-height: none; /* Reset max-height */
+        padding-right: 0; /* Reset padding */
+        margin-left: auto; /* Align to the right */
+        margin-right: 0%; /* Align to the right */
+        border-radius: 25px;
+        border: none;
+    }
+
+    nav ul {
+        display: flex; /* Horizontal layout for larger screens */
+        flex-direction: row; /* Horizontal layout for larger screens */
+        justify-content: space-evenly; /* Space items evenly */
+        align-items: center; /* Center items vertically */
+        width: 100%;
+    }
+
+    nav ul li {
+        border-bottom: none; /* Remove border for larger screens */
+        font-size: 18px; /* Adjust font size */
+        width: auto; /* Reset width for larger screens */
+    }
+
+
+    header {
+        justify-content: space-between; /* Ensure space between logo and nav */
+    }
+
+    .logo {
+        flex-grow: 1; /* Allow logo to take available space */
+    }
+
+    .hero {
+        height: 40vh; /* Set the height of the hero section */
+    }
+
+    .phone-button {
+        pointer-events: none;
+        opacity: 0.7; /* Reduce opacity to indicate it's inactive */
+        }
+
+            .section-heading {
+                margin-bottom: 20px; /* Add space between heading and services */
+            }
+
+            .services {
+                display: flex; /* Arrange elements side by side */
+                flex-wrap: wrap; /* Allow elements to wrap to the next line */
+                justify-content: space-evenly; /* Space items evenly */
+                padding: 0 10px; /* Adjust padding as needed */
+            }
+
+            .service {
+                display: flex; /* Arrange elements side by side */
+                align-items: stretch; /* Stretch items to full height */
+                width: 100%;
+                margin: 10px; /* Smaller margin */
+                padding-bottom: 0; /* Remove padding */
+                margin-bottom: 20px;
+            }
+        
+            .service img {
+                flex: 1; /* Allow image to take up 50% */
+                max-width: 50%;
+                height: auto; /* Maintain the aspect ratio */
+            }
+        
+            .service-description {
+                flex: 1; /* Allow description to take up the remaining 50% */
+                padding: 0 2%;
+            }
+        
+            .service-heading {
+                margin-bottom: auto; /* Ensure heading stays at the top */
+                padding-bottom: 2%;
+            }
+        
+            .service-text {
+                margin-top: auto; /* Ensure text stays at the bottom */
+                padding-right: 10px;
+            }
+
+    .contact {
+        padding-top: 2%; /* Adjust this value based on the height of your header */
+        padding-left: 8px;
+        padding-right: 8px;
+        text-align: center;
+        background-color: #444;
+        padding-left: 8%;
+        padding-right: 8%;
+        color: white;
+        padding-bottom: 0%;
+    }
+
+    .contact-heading {
+        font-size: 25px;
+        text-align: center;
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+
+    .contact-text {
+        font-size: 18px;
+        text-align: center;
+        padding-top: 2%;
+        padding-bottom: 3%;
+    }
 }
