@@ -132,7 +132,7 @@ nav ul li {
     padding: 10px 0;
     text-align: center;
     color: white;
-    font-size: 3vh;
+    font-size: 2.5vh;
     border-bottom: 1px solid #555;
     width: 100%; /* Ensure the list items take full width */
 }
@@ -192,7 +192,7 @@ nav ul li a:active, nav ul li a:focus {
 
 .hero-text button {
     padding: 15px 30px; /* Increase padding for a larger button */
-    font-size: 20px; /* Increase font size */
+    font-size: 15px; /* Increase font size */
     border-radius: 25px; /* Make the button rounded */
     border: none; /* Remove default border */
     background-color: #007BFF; /* Set background color */
@@ -207,19 +207,19 @@ nav ul li a:active, nav ul li a:focus {
 }
 
 .hero-h1 {
-    font-size: 40px;
+    font-size: 32px;
     margin-bottom: 30px; /* Add space between heading and text */
 }
 
 .hero-p {
-    font-size: 30px;
+    font-size: 24px;
     margin-bottom: 50px; /* Add space between text and button */
 }
 
 .phone-button,
 .contact-button {
     padding: 15px 30px; /* Increase padding for a larger button */
-    font-size: 25px; /* Increase font size */
+    font-size: 18px; /* Increase font size */
     border-radius: 25px; /* Make the button rounded */
     border: none; /* Remove default border */
     background-color: #007BFF; /* Set background color */
@@ -334,7 +334,7 @@ nav ul li a:active, nav ul li a:focus {
 
 .contact-button {
     display: inline-block;
-    width: 270px; /* Fixed width for the buttons */
+    width: 290px; /* Fixed width for the buttons */
     text-align: center;
     margin-bottom: 10px; /* Space between buttons */
     text-decoration: none; /* Remove underline from links */
@@ -343,7 +343,7 @@ nav ul li a:active, nav ul li a:focus {
 .contact-button button {
     width: 100%; /* Ensure the button takes full width of the container */
     padding: 10px 20px; /* Add padding for button */
-    font-size: 16px;
+    font-size: 24px;
     border-radius: 25px;
     border: none; /* Remove default border */
     background-color: #007BFF; /* Set background color */
